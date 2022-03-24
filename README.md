@@ -5,3 +5,9 @@
 ██╔═██╗░░░░██║░░░░░░░░██╔══██║░░░░░████╔═████║░
 ██║░╚██╗██╗███████╗██╗██║░░██║██╗░░╚██╔╝░╚██╔╝░
 ╚═╝░░╚═╝╚═╝╚══════╝╚═╝╚═╝░░╚═╝╚═╝░░░╚═╝░░░╚═╝░░
+
+This tool is a very advanced digital ai voice assistant
+creator - @Manas-kishore
+follow on :
+insta- @cisco_the_hecker
+thanks
