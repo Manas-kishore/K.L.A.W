@@ -52,8 +52,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('manaskishore16@gmail.com', 'spmk@1625-v')
-    server.sendmail('manaskishore16@gmail.com', to, content)
+    server.login('yourmail', 'your pass')
+    server.sendmail('your mail', to, content)
     server.close()
 
 if __name__ == "__main__":
@@ -100,6 +100,11 @@ if __name__ == "__main__":
             except Exception as e:
                 print(e)
                 speak("Sorry my friend. I am not able to send this email") 
+
         elif 'shut down' in query:
+            speak('shutting down')
+            os.system("poweroff")
+
+        elif 'shutdown' in query:
             speak('shutting down')
             os.system("poweroff")
