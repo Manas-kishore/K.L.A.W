@@ -8,7 +8,7 @@ import smtplib
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[2].id)
+engine.setProperty('voice', voices[3].id)
 
 
 def speak(audio):
@@ -27,7 +27,7 @@ def wishMe():
     else:
         speak("Good Evening!")  
 
-    speak("I am Jarvis Sir. Please tell me how may I help you")       
+    speak("I am KLAW. Please tell me how may I help you")       
 
 def takeCommand():
 
@@ -53,7 +53,7 @@ def sendEmail(to, content):
     server.ehlo()
     server.starttls()
     server.login('manaskishore16@gmail.com', 'spmk@1625-v')
-    server.sendmail('youremail@gmail.com', to, content)
+    server.sendmail('manaskishore16@gmail.com', to, content)
     server.close()
 
 if __name__ == "__main__":
@@ -90,7 +90,7 @@ if __name__ == "__main__":
             speak(f"Sir, the time is {strTime}")
 
 
-        elif 'email to anonymo' in query:
+        elif 'email to bill' in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
@@ -100,3 +100,6 @@ if __name__ == "__main__":
             except Exception as e:
                 print(e)
                 speak("Sorry my friend. I am not able to send this email") 
+        elif 'shut down' in query:
+            speak('shutting down')
+            os.system("poweroff")
