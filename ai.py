@@ -5,10 +5,11 @@ import wikipedia
 import webbrowser
 import os
 import smtplib
+import pyautogui
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[3].id)
+engine.setProperty("rate", 178)
 
 
 def speak(audio):
@@ -77,8 +78,7 @@ if __name__ == "__main__":
 
         elif 'open stackoverflow' in query:
             webbrowser.open("stackoverflow.com")   
-
-
+            
         elif 'play music' in query:
             music_dir = ''
             songs = os.listdir(music_dir)
@@ -87,6 +87,7 @@ if __name__ == "__main__":
 
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")    
+            print(f"Sir, the time is {strTime}")
             speak(f"Sir, the time is {strTime}")
 
 
@@ -108,3 +109,30 @@ if __name__ == "__main__":
         elif 'shutdown' in query:
             speak('shutting down')
             os.system("poweroff")
+
+        elif 'close yourself' in query:
+            speak('thanks for using me')
+            print('Quiting...........')
+            break
+        elif 'how are you' in query:
+            speak('i am fine! what about you, sir')
+        
+        elif 'school site' in query:
+            webbrowser.open('your school site')
+        
+        elif 'old songs' in query:
+            speak('opening')
+            print('opening...')
+            webbrowser.open('https://www.youtube.com/results?search_query=old+songs')
+            
+        elif 'introduce yourself' in query:
+            speak("I am KLAW. A very high profiled ai voice assistant developed by Cisco a k a manas kishore")
+        
+        elif 'repeat' in query:
+            speak('now speak')
+            s = takeCommand()
+            speak(s)
+
+        
+
+        
