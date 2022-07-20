@@ -85,7 +85,7 @@ if __name__ == "__main__":
             speak('i am fine! what about you, sir')
             
         elif 'introduce yourself' in query:
-            speak("I am KLAW. A very high profiled ai voice assistant developed by Cisco a k a manas kishore")
+            speak("I am claw. A very high profiled ai voice assistant developed by Cisco a k a manas kishore")
         
         elif 'repeat' in query:
             speak('now speak')
